@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet">
     <title>Weather App</title>
   </head>
   <body class="flex column">
     <header class="flex column">
       <section class="flex">
         <h1>WeatherApp</h1>
-        <img src="../assets/appIcon.svg" alt="weatherIcon" id="appIcon">
+        <img alt="weatherIcon" id="appIcon">
       </section>
       <section class="flex">
-        <input type="text" placeholder="Type a location...">
+        <input type="text" id="searchInput" placeholder="Type a location...">
         <button id="searchButton">
-          <img src="../assets/search-outline.svg" alt="searchIcon" id="searchIcon">
+          <img alt="searchIcon" id="searchIcon">
         </button>
       </section>
     </header>
   </body>
-  <div id="content"></div>
+  <div id="content" class="flex column"></div>
   <footer>Front-end project by MPenunuri.</footer>
 </html>
