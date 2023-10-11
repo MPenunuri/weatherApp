@@ -2,10 +2,17 @@
 import showBanner from './showBanner.js';
 import showCarousel from '../carousel/showCarousel.js';
 import showSingleResult from './showSingleResult.js';
+import listenersToLocationResults from './listenersToLocationResults.js';
 
 export default function (arrayOfLocations) {
   const numOfLocations = arrayOfLocations.length;
   showBanner(`${numOfLocations} locations finded:`);
   const content = document.getElementById('content');
-  showCarousel(content, arrayOfLocations, showSingleResult, 'url');
+  showCarousel(
+    content,
+    arrayOfLocations,
+    showSingleResult,
+    'url',
+    listenersToLocationResults
+  );
 }

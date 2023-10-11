@@ -8,11 +8,12 @@ export default function (
   parent,
   arrayOfObjects,
   objectHandlerFn,
-  attributeAsId
+  attributeAsId,
+  otherListeners
 ) {
-  createHtmlElement(parent, 'section', ['carousel'], '');
+  createHtmlElement(parent, 'section', ['carousel', 'flex'], '');
   addCarouselElements(arrayOfObjects, objectHandlerFn, attributeAsId);
   addCarouselControlers(parent);
   setFirstCarouselElement(0);
-  addEventListeners();
+  addEventListeners(otherListeners);
 }

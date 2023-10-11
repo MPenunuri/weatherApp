@@ -1,6 +1,7 @@
 import showBanner from './showBanner.js';
 import showSearchResults from './showSearchResults.js';
 import clearContainer from './clearContainer.js';
+import showLocationData from './showLocationData.js';
 
 export default function (arrayOfLocations) {
   clearContainer();
@@ -9,7 +10,7 @@ export default function (arrayOfLocations) {
       "We're sorry, we couldn't find any results for your search. Please review your query and try again."
     );
   } else if (arrayOfLocations.length === 1) {
-    console.log('1 location finded');
+    showLocationData(arrayOfLocations[0].url);
   } else {
     showSearchResults(arrayOfLocations);
   }

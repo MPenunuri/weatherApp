@@ -125,14 +125,12 @@ footer{
 }
 
 .carousel{
-    display: flex;
     padding: 1rem;
     margin-bottom: .5rem;
     width: 260px;
 }
 
 .carouselElement{
-    width: 200px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 6px 6px 10px black;
@@ -141,17 +139,30 @@ footer{
     margin-left: -40%;
 }
 
-.carouselElement > p{
+.searchResult{
+    width: 140px;
+    height: 160px;
+}
+
+.forecastDay{
+    width: 140px;
+    height: 250px;
+}
+
+.carouselElement > p, 
+.carouselElement > div > p{
     font-size: .75rem;
     text-align: center;
 }
 
-.carouselElement > p:first-child{
+.carouselElement > p:first-child, 
+.carouselElement > div > p:first-child,
+.details > div > p:first-child{
     font-size: 1rem;
     font-weight: 800;
 }
 
-.carouselElement > button{
+.carouselElement > button, .detailsBtn{
     margin-top: .5rem;
     box-shadow: 2px 2px 6px black;
     font-weight: 800;
@@ -160,7 +171,7 @@ footer{
     flex-shrink: 0;
 }
 
-.carouselElement.active{
+.carouselElement.first{
     margin-left: 0;
 }
 
@@ -175,3 +186,192 @@ footer{
 .carouselControler > img:hover{
     cursor: pointer;
 }
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3{
+    font-style: italic;
+}
+
+.clock{
+    width: 100px;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 4px black;
+}
+
+.locationPanel, .currentPanel{
+    width: 260px;
+}
+
+.currentPanel > div > p {
+    text-align: center;
+}
+
+.currentPanel > div > p:first-child{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#conditionIcon{
+    width: 5rem;
+}
+
+.detailsContainer{
+    background-color: rgb(173, 168, 168,.4);
+    position: absolute;
+    height: 300vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+.details{
+    position: fixed;
+    top: 5vh;
+    width: 300px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    box-shadow: 6px 6px 10px black;
+}
+
+.closeDetailsBtn{
+    background-color:rgb(176, 51, 51);
+    position: absolute;
+    top: -4%;
+    left: 85%;
+    z-index: 101;
+    border-radius: 100px;
+    padding: 0;
+    box-shadow: 6px 6px 10px black;
+}
+
+.closeDetailsBtn > img{
+    width: 3rem;
+    filter: grayscale(0);
+}
+
+.closeDetailsBtn:hover{
+    cursor: pointer;
+}
+
+.tableContainer{
+    background-color: rgba(50, 48, 48, 0.95);
+    position: absolute;
+    height: 300vh;
+    width: 100vw;
+    z-index: 200;
+}
+
+.centralContainer{
+    position: fixed;
+    top: 85px;
+}
+
+.tableControlers{
+    position: absolute;
+    top: -85px;
+    left: 27%;
+    box-shadow: 2px 2px 6px white;
+}
+
+.tableControler > img{
+    width: 1.5rem;
+}
+
+table{
+    background-color: white;
+    width: 300px;
+    z-index: 201;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+    padding-left: 2rem;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 6px white;
+    overflow: hidden;
+}
+
+thead, tbody{
+    overflow: scroll;
+    width: 300px;
+}
+
+tbody{
+    height: 60vh;
+}
+
+thead, tr{
+    display: flex;
+    gap: .5rem;
+}
+
+th{
+    font-weight: 700;
+}
+
+th, td{
+    display: none;
+    width: 10px;
+    text-align: center;
+    padding: .5rem 0rem;
+    overflow: hidden;
+}
+
+th.active, td.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    min-width: 200px;
+    min-height: 40px;
+}
+
+tr > th,td{
+    border-top: 1px solid;
+}
+
+tr > th, thead > th:first-child{
+    display: grid;
+    place-items: center;
+    min-width: 50px;
+    text-align: left;
+    padding: .5rem;
+}
+
+td > p{
+    width: 150px;
+}
+
+td > img{
+    width: 40px;
+    margin-right: 20px;
+}
+
+.tableBtn{
+    position: absolute;
+    height: 3rem;
+    background-color:rgb(176, 51, 51);
+    top: -2%;
+    left: 85%;
+    z-index: 302;
+    border-radius: 100px;
+    padding: 0;
+    box-shadow: 6px 6px 10px black;
+}
+
+.tableBtn > img{
+    width: 3rem;
+    filter: grayscale(0);
+}
+
+.tableBtn:hover{
+    cursor: pointer;
+}
+

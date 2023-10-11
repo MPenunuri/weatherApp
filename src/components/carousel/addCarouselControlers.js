@@ -2,7 +2,7 @@ import createHtmlElement from '../../services/createHtmlElement.js';
 import arrowBack from '../../../assets/arrow-back.svg';
 import arrowForward from '../../../assets/arrow-forward.svg';
 
-export default function (parent) {
+export default function () {
   const content = document.getElementById('content');
   createHtmlElement(content, 'section', ['flex', 'carouselControlers']);
   const controlersContainer = document.querySelector('.carouselControlers');
